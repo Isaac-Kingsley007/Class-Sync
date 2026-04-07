@@ -3,37 +3,29 @@
 
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 
-# Student Information Managment App
-
-We are going to build a Student information managment Application
+# Student Information Management App
 
 ## Description
-We are going to build a student Information managment Application where students will be able to view the information Faculty manage the student info and Admin overview the entier information
-
-## Roles
-
-It has 3 Roles 
-1. Student 
-2. Faculty
-3. Admin
-
-### Student 
-Views the Info
-
-### Faculty 
-Manages the info for thier corresponding students
-
-### Admin 
-Manages The Overall Info
-
-## Info This App Manages 
-1. Attendance
-2. Marks and Grades
+A centralized platform for managing academic records. The system allows students to track their progress, faculty to manage classroom data, and admins to oversee the entire institution.
 
 ## Tech Stack
-1. Next js
-2. Tailwind CSS
-3. Prisma
-4. pnpm
+* **Framework:** Next.js (App Router)
+* **Styling:** Tailwind CSS + ShadcnUI (recommended for dashboards)
+* **ORM:** Prisma
+* **Database:** PostgreSQL (or your choice)
+* **Package Manager:** pnpm
+
+## Roles & Permissions
+
+| Role | Access Level | Key Features |
+| :--- | :--- | :--- |
+| **Student** | Read-only (Own data) | View attendance, check grades, view profile. |
+| **Faculty** | Read/Write (Assigned students) | Mark daily attendance, upload marks, update student info. |
+| **Admin** | Full Access | Manage users (CRUD), assign roles, system-wide reports. |
+
+## Information this App Manages
+1. **Attendance:** Tracks daily presence per subject.
+2. **Academic Records:** Manages marks, credits, and GPA calculation.
+3. **User Profiles:** Stores basic info, department, and semester details.
 
 <!-- END:nextjs-agent-rules -->
