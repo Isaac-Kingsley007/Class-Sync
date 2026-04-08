@@ -18,7 +18,7 @@ interface NavItem {
 interface SidebarNavProps {
   items: NavItem[];
   userName: string;
-  role: "student" | "faculty";
+  role: "student" | "faculty" | "admin";
   roleLabel: string;
   accentColor: string; // tailwind gradient class
 }
@@ -47,14 +47,14 @@ export function SidebarNav({
         <div
           className={`flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br ${accentColor} text-white font-bold text-sm shadow-lg`}
         >
-          {role === "student" ? "S" : "F"}
+          {role === "student" ? "S" : role === "faculty" ? "F" : "A"}
         </div>
         <div>
           <h2 className="text-sm font-bold tracking-tight text-foreground">
             Academic Portal
           </h2>
           <p className="text-[11px] text-muted-foreground">
-            {role === "student" ? "Student" : "Faculty"} Panel
+            {role === "student" ? "Student" : role === "faculty" ? "Faculty" : "Admin"} Panel
           </p>
         </div>
       </div>
