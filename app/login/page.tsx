@@ -19,18 +19,18 @@ export default function LoginPage() {
     setError(null);
     const formData = new FormData(e.currentTarget);
     try {
-        const res = await loginUser(formData);
-        if (res?.error) {
-            setError(res.error);
-        }
+      const res = await loginUser(formData);
+      if (res?.error) {
+        setError(res.error);
+      }
     } catch (err: unknown) {
-        if (err instanceof Error && err.message !== "NEXT_REDIRECT") {
-            setError("Something went wrong");
-        } else {
-            throw err; // Re-throw redirect
-        }
+      if (err instanceof Error && err.message !== "NEXT_REDIRECT") {
+        setError("Something went wrong");
+      } else {
+        throw err; // Re-throw redirect
+      }
     } finally {
-        setIsPending(false);
+      setIsPending(false);
     }
   }
 

@@ -56,7 +56,7 @@ export default async function StudentDashboard() {
   // Use Final exam grades, falling back to Midterm for GPA
   const finalRecords = student.academicRecords.filter((r) => r.examType === "Final");
   const gpaRecords = finalRecords.length > 0 ? finalRecords : student.academicRecords.filter((r) => r.examType === "Midterm");
-  
+
   let gpa = 0;
   if (gpaRecords.length > 0) {
     const totalWeighted = gpaRecords.reduce((acc, r) => {

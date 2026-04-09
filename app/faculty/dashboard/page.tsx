@@ -99,10 +99,10 @@ export default async function FacultyDashboard() {
               <p className="mt-0.5 text-sm font-semibold">
                 {faculty.dateOfJoining
                   ? new Date(faculty.dateOfJoining).toLocaleDateString("en-IN", {
-                      day: "numeric",
-                      month: "short",
-                      year: "numeric",
-                    })
+                    day: "numeric",
+                    month: "short",
+                    year: "numeric",
+                  })
                   : "—"}
               </p>
             </div>

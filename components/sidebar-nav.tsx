@@ -70,16 +70,14 @@ export function SidebarNav({
               key={item.href}
               href={item.href}
               onClick={() => setMobileOpen(false)}
-              className={`group flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-200 ${
-                isActive
+              className={`group flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-200 ${isActive
                   ? `bg-gradient-to-r ${accentColor} text-white shadow-md`
                   : "text-muted-foreground hover:bg-muted hover:text-foreground"
-              }`}
+                }`}
             >
               <span
-                className={`flex h-5 w-5 items-center justify-center transition-transform duration-200 ${
-                  isActive ? "scale-110" : "group-hover:scale-105"
-                }`}
+                className={`flex h-5 w-5 items-center justify-center transition-transform duration-200 ${isActive ? "scale-110" : "group-hover:scale-105"
+                  }`}
               >
                 {item.icon}
               </span>
@@ -184,9 +182,8 @@ export function SidebarNav({
 
       {/* Mobile sidebar */}
       <aside
-        className={`fixed inset-y-0 left-0 z-50 w-64 bg-card border-r border-border shadow-2xl transition-transform duration-300 lg:hidden ${
-          mobileOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className={`fixed inset-y-0 left-0 z-50 w-64 bg-card border-r border-border shadow-2xl transition-transform duration-300 lg:hidden ${mobileOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
       >
         {sidebarContent}
       </aside>
