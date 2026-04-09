@@ -3,7 +3,7 @@
 
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 
-# Student Information Management App
+# Class Hub
 
 ## Description
 A centralized platform for managing academic records. The system allows students to track their progress, faculty to manage classroom data, and admins to oversee the entire institution.

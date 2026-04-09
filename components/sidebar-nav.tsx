@@ -51,7 +51,7 @@ export function SidebarNav({
         </div>
         <div>
           <h2 className="text-sm font-bold tracking-tight text-foreground">
-            Academic Portal
+            Class Hub
           </h2>
           <p className="text-[11px] text-muted-foreground">
             {role === "student" ? "Student" : role === "faculty" ? "Faculty" : "Admin"} Panel
