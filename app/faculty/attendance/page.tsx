@@ -1,6 +1,7 @@
 import { cookies } from "next/headers";
 import prisma from "@/lib/prisma";
 import { AttendanceMarker } from "./attendance-marker";
+import { AttendanceExportButton } from "./attendance-export-button";
 
 export default async function FacultyAttendancePage() {
   const cookieStore = await cookies();
@@ -97,6 +98,9 @@ export default async function FacultyAttendancePage() {
           Select a subject and date, then mark attendance for each student.
         </p>
       </div>
+
+      {/* Excel Download */}
+      <AttendanceExportButton subjects={subjects} />
 
       <AttendanceMarker
         subjects={subjects}
